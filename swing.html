@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #d7c8d0;
+        }
+
+        .swing-container {
+            width: 500px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .roof {
+            width: 100%;
+            height: 20px;
+            background-color: #18619b;
+        }
+
+        .ball-wrapper {
+            flex-basis: 100px;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ball {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 90px;
+            border-radius: 50px;
+            background-color: #edcb66;
+        }
+
+        .rope {
+            background: black;
+            width: 2px;
+            height: 280px;
+        }
+
+        .left-ball.ball-wrapper {
+            transform-origin: center top;
+            animation: left-ball-swing 4s 0s infinite normal;
+        }
+        
+        @keyframes left-ball-swing {
+            0% {
+                transform: rotate(0deg);
+                animation-timing-function: ease-out；
+            }
+            25% {
+                transform: rotate(90deg);
+                animation-timing-function: ease-in;
+            }
+            50% {
+                transform: rotate(0deg)
+            }
+            100% {}
+        }
+        
+        .right-ball.ball-wrapper {
+            transform-origin: center top;
+            animation: right-ball-swing 4s 2s infinite normal;
+        }
+
+        @keyframes right-ball-swing {
+            0% {
+                transform: rotate(0deg);
+                animation-timing-function: ease-out;
+            }
+            25% {
+                transform: rotate(-90deg);
+                animation-timing-function: ease-in;
+            }
+            50% {
+                transform: rotate(0deg)
+            }
+            100% {}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="swing-container">
+            <div class="roof">
+            </div>
+            <div class="left-ball ball-wrapper">
+                <div class="rope"></div>
+                <div class="ball">快</div>
+            </div>
+            <div class="ball-wrapper">
+                <div class="rope"></div>
+                <div class="ball">点</div>
+            </div>
+            <div class="ball-wrapper">
+                <div class="rope"></div>
+                <div class="ball">去</div>
+            </div>
+            <div class="ball-wrapper">
+                <div class="rope"></div>
+                <div class="ball">看</div>
+            </div>
+            <div class="right-ball ball-wrapper">
+                <div class="rope"></div>
+                <div class="ball">书</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
